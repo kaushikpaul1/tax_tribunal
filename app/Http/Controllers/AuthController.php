@@ -37,14 +37,14 @@ class AuthController extends Controller
         return back()->with('success','Your Registration has been successfull.');
     }
 
-    public function loadLogin()
-    {
-        if(Auth::user()){
-            $route = $this->redirectDash();
-            return redirect($route);
-        }
-        return view('login');
-    }
+    // public function loadLogin()
+    // {
+    //     if(Auth::user()){
+    //         $route = $this->redirectDash();
+    //         return redirect($route);
+    //     }
+    //     return view('login');
+    // }
 
     public function login(Request $request)
     {

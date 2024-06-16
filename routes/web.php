@@ -34,7 +34,11 @@ Route::post('/register', [AuthController::class, 'register'])->name('register');
 //     return redirect('/');
 // });
 
-Route::get('/login', [AuthController::class, 'loadLogin']);
+// Route::get('/login', [AuthController::class, 'loadLogin']);
+Route::get('/login', function () {
+    abort(404);
+});
+
 Route::get('/', [landingcontroller::class, 'Landingpage']);
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout']);

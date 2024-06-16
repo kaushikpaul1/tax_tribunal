@@ -55,22 +55,22 @@
                             <b>ORDERS AND OPINIONS</b>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ url('/login') }}">
                             <b>Login</b>
                         </a>
+                    </li> --}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <b>Login</b>
+                        </a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
     </nav>
     </div>
-
-
-
-
-
-
 
     <!-- Main container -->
     <div class="main-container d-flex color">
@@ -122,20 +122,10 @@
             <!-- News Section -->
             <div class="news-section">
                 <h2>Latest News</h2>
-
-
-
             </div>
-
-
-
 
         </div>
     </div>
-
-
-
-
 
     <!-- importent -->
 
@@ -275,13 +265,6 @@
                 showNotice(); // Show notice section by default on page load
             });
         </script>
-
-
-
-
-
-
-
         <div class="my-5">
             <!-- Footer -->
             <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1;">
@@ -374,7 +357,35 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
             integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
         </script>
-        
+    </div>
+    <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Your login form can go here -->
+                <form method="POST" action="{{ url('/login') }}">
+                    @csrf
+                    <!-- Add your login form fields here -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 
 </html>
