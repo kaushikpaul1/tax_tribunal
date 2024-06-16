@@ -1,0 +1,248 @@
+.navbar-logo {
+    width: 200px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: -40px;
+}
+
+
+.paragraph {
+    margin-top: 5px;
+    margin-left: -60px;
+}
+
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paragraph {
+        margin-left: 0;
+        text-align: center;
+
+    }
+
+    .navbar-logo {
+        /* Adjust the logo's margin */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+
+.nav-link {
+    font-size: 17px;
+}
+
+
+
+
+
+
+/* //main */
+
+.color {
+    background-image: linear-gradient(200deg, #cdffd8, #94b9ff);
+}
+
+
+
+
+.two {
+    border: 2px solid black;
+
+
+
+
+}
+
+
+
+.news-section {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+/* .main-container {
+        width: 100vh; /* set the main container height to 100vh */
+/* } */
+
+.one {
+    border: 3px solid seagreen;
+    position: relative;
+    /* Ensure the carousel is positioned relative to the container */
+}
+
+.carousel-inner {
+    width: 100%;
+    /* Make the carousel width 100% of its parent container */
+    height: 100%;
+    /* Make the carousel height 100% of its parent container */
+}
+
+.carousel-item {
+    width: 100%;
+    /* Make each carousel item width 100% */
+    height: 100%;
+    /* Make each carousel item height 100% */
+}
+
+.carousel-item img {
+    width: 100%;
+    /* Make the image width 100% of its parent carousel item */
+    height: 100%;
+    /* Make the image height 100% of its parent carousel item */
+    object-fit: cover;
+    /* Ensure the image covers the entire space */
+}
+
+/* .carousel {
+      /* position: absolute; */
+/* top: 0;
+      left: 0;
+      width: 100%;  
+      height: 100%;   */
+/* } */
+
+
+
+
+
+
+
+
+
+/* importent */
+
+
+
+
+
+
+.balance,
+.check,
+.law {
+    height: 6rem;
+    width: 6rem;
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.card {
+    width: 14rem;
+    margin-bottom: 20px;
+    /* Adjust spacing between cards */
+}
+
+@media screen and (max-width: 786px) {
+    .pp {
+        flex-direction: row;
+        /* Change to row layout for larger screens */
+        flex-wrap: wrap;
+        column-gap: 10px;
+
+
+    }
+
+    .card {
+        width: 11rem;
+        height: 15rem;
+        margin-bottom: 20px;
+        /* Adjust spacing between cards */
+    }
+
+    .balance,
+    .check,
+    .law {
+        height: 3rem;
+        width: 3rem;
+        margin-top: 6px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .card-text {
+        margin-top: -13px;
+        padding-top: 2px;
+        text-align: center;
+    }
+
+    .card-title {
+        margin-top: -10px;
+        padding-bottom: 2px;
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+/* notice */
+
+.toggler-container {
+    margin: 20px;
+
+}
+
+.button-container {
+    display: flex;
+
+}
+
+.button-container button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-container button.active {
+    background-color: #333;
+    color: white;
+}
+
+.content-container {
+    margin-top: 20px;
+}
+
+.notice-section,
+.circular-section {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.active-section {
+    display: block;
+}
+
+.notice-section h2,
+.circular-section h2 {
+    margin-bottom: 10px;
+}
+
+
+/* Media Query for Mobile View */
+@media screen and (max-width: 786px) {
+    .toggler-container {
+        flex-direction: row;
+        /* Change to row layout for larger screens */
+    }
+
+    .button-container {
+        flex-direction: row;
+        /* Change to row layout for larger screens */
+    }
+}
