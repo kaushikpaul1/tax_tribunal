@@ -25,24 +25,76 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="{{ asset('js/multiselect-dropdown.js') }}"></script>
-    
+
     <style>
         .multiselect-dropdown {
             width: 100% !important;
         }
+
         .btn-xs {
-        padding: 0.25rem 0.5rem;
-        font-size: 0.75rem;
-        line-height: 1.5;
-        border-radius: 0.2rem;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            line-height: 1.5;
+            border-radius: 0.2rem;
+        }
+        .navbar-logo {
+        max-width: 50px; /* Decreased size */
+        height: auto;
     }
-    
-   
+
+    .paragraph p {
+        font-size: 1.25rem; /* Adjust for text size */
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        .paragraph p {
+            font-size: 1rem; /* Smaller text on mobile */
+        }
+
+        .navbar-logo {
+            max-width: 30px; /* Smaller logo on mobile */
+        }
+    }
     </style>
 </head>
 
 <body>
 
+     <!-- Header Start -->
+     <header class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <!-- New content section -->
+            <div class="d-flex align-items-center">
+                <div>
+                    <img src="{{ asset('images/WB.svg') }}" alt="West Bengal Logo" class="img-fluid navbar-logo me-3">
+                </div>
+                <div class="paragraph">
+                    <p class="mt-2 mb-0 display-6 text-white">WEST BENGAL TAX TRIBUNAL<br>GOVERNMENT OF WEST BENGAL</p>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar">
             <div class="custom-menu">
@@ -70,7 +122,8 @@
                         <a href="{{ route('superAdminUsers') }}"><span class="fa fa-users mr-3"></span> Users</a>
                     </li> --}}
                     <li>
-                        <a href="{{ route('hearingdateadmin') }}"><span class="fa fa-users mr-3"></span> Hearing Publish</a>
+                        <a href="{{ route('hearingdateadmin') }}"><span class="fa fa-users mr-3"></span> Hearing
+                            Publish</a>
                     </li>
                     {{-- <li>
                         <a href="{{ route('manageRole') }}"><span class="fa fa-role mr-3"></span> Manage Role</a>
@@ -122,13 +175,13 @@
             @yield('space-work')
         </div>
     </div>
-<!-- Footer -->
-<footer class="bg-light text-center text-lg-start">
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start">
 
-    <div class="text-center p-4 bg-dark text-white">
-        &copy; 2024 Tax-Tribunal. All rights reserved.
-    </div>
-</footer>
+        <div class="text-center p-4 bg-dark text-white">
+            &copy; 2024 Tax-Tribunal. All rights reserved.
+        </div>
+    </footer>
     <!-- <script src="{{ asset('js/jquery.min.js') }}"></script> -->
     <script src="{{ asset('js/popper.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
@@ -155,7 +208,7 @@
     <script src="https://cdn.datatables.net/2.0.0/js/dataTables.bootstrap5.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
-  
+
 
     <script>
         $(document).ready(function() {
@@ -165,7 +218,7 @@
     </script>
     <!-- Add this section to yield additional scripts -->
     @yield('scripts')
-    
+
 </body>
 
 </html>

@@ -12,12 +12,6 @@
 
 <body>
 
-
-
-
-
-
-
     <!-- header -->
     <div>
         <!-- WB image -->
