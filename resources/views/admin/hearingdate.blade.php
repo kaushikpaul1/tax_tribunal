@@ -9,7 +9,7 @@
                         <h2>Select Date For  Hearing Details</h2>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{route('hearingadmin')}}">
+                        <form method="GET" action="{{route('hearingadmin')}}">
                             @csrf
                             <div class="form-group">
                                 <label for="selected_date">Select Date:</label>

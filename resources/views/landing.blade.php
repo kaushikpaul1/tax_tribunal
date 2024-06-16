@@ -287,32 +287,7 @@
             <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1;">
                 <!-- Section: Social media -->
                 <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192;">
-                    <!-- Left -->
-                    <!-- Left -->
 
-                    <!-- Right -->
-                    <!-- Uncomment and add appropriate links if needed -->
-                    <!-- <div>
-          <a href="#" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="#" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="#" class="text-white me-4">
-            <i class="fab fa-github"></i>
-          </a>
-        </div> -->
-                    <!-- Right -->
                 </section>
                 <!-- Section: Social media -->
 
@@ -321,11 +296,7 @@
                     <div class="container text-center text-md-start mt-5">
                         <!-- Grid row -->
                         <div class="row mt-3">
-                            <!-- Grid column -->
-                            <!-- Add content if needed -->
-                            <!-- Grid column -->
 
-                            <!-- Grid column -->
                             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                                 <!-- Links -->
                                 <h6 class="text-uppercase fw-bold">Activities</h6>
@@ -394,8 +365,6 @@
         </div>
         <!-- End of .container -->
 
-
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
@@ -405,6 +374,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
             integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
         </script>
+        
 </body>
 
 </html>

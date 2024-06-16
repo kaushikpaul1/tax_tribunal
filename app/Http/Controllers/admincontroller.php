@@ -51,50 +51,31 @@ class admincontroller extends Controller
         return view('admin.hearingview')->with('hearingview', $hearingview)->with('selectedDate', $selectedDate);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     public function publish(Request $request)
     {
-        // Validate the request
-        $request->validate([
-            'selectedRows' => 'required|array',
-            'selectedRows.*' => 'exists:hearingdetails,id', // Assuming 'hearings' is your model table name
-        ]);
-    
-        // Get the selected hearing IDs from the request
+        // Get the selected rows from the request
         $selectedRows = $request->input('selectedRows');
-    
+        // dd($request->all());
+
+        // Check if any rows are selected
+        if (empty($selectedRows)) {
+            return redirect()->back()->with('error', 'No items selected for publishing.');
+        }
         try {
             // Update the publish status of selected hearings
-            hearingmodel::whereIn('id', $selectedRows)->update(['publishstatus' => 1]);
-    
+            hearingmodel::whereIn('acknowledgment_number', $selectedRows)->update(['publishstatus' => true]);
+            //  dd($request->all());
             // Optionally, you can retrieve the published data to send to the frontend
-            $publishedData = hearingmodel::whereIn('id', $selectedRows)->get();
-    
+            // $publishedData = hearingmodel::whereIn('id', $selectedRows)->get();
+
             // Redirect to a route with success message and data
-            return redirect()->route('admin.hearingview')->with('message', 'Published successfully.')->with('publishedData', $publishedData);
+            return redirect()->back()->with('message', 'Published successfully.');
         } catch (\Exception $e) {
-            // Handle exception if any
+            Log::error('Failed to publish: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Failed to publish. Please try again.');
         }
     }
+    // this is optional;
     public function success()
     {
         // Retrieve the success message and published data from the session

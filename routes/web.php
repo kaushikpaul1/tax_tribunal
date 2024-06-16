@@ -40,12 +40,6 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout']);
 
 
-
-
-
-
-
-
 // ********** Admin Routes *********
 Route::group(['prefix' => 'admin', 'middleware' => ['web', 'isSuperAdmin']], function () {
     Route::get('/dashboard', [SuperAdminController::class, 'dashboard']);
@@ -54,8 +48,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'isSuperAdmin']], fun
     Route::get('/manage-role', [SuperAdminController::class, 'manageRole'])->name('manageRole');
     Route::post('/update-role', [SuperAdminController::class, 'updateRole'])->name('updateRole');
     Route::get('/hearing-date-admin', [admincontroller::class, 'hearingdateadmin'])->name('hearingdateadmin');
-    Route::post('/hearing-view', [admincontroller::class, 'hearingadmin'])->name('hearingadmin');
+    Route::get('/hearing-view', [admincontroller::class, 'hearingadmin'])->name('hearingadmin');
     Route::post('/publish', [admincontroller::class, 'publish'])->name('publish');
+  
     
 });
 
