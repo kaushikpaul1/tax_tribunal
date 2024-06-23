@@ -37,32 +37,37 @@
             line-height: 1.5;
             border-radius: 0.2rem;
         }
+
         .navbar-logo {
-        max-width: 50px; /* Decreased size */
-        height: auto;
-    }
+            max-width: 50px;
+            /* Decreased size */
+            height: auto;
+        }
 
-    .paragraph p {
-        font-size: 1.25rem; /* Adjust for text size */
-        font-weight: bold;
-    }
-
-    @media (max-width: 768px) {
         .paragraph p {
-            font-size: 1rem; /* Smaller text on mobile */
+            font-size: 1.25rem;
+            /* Adjust for text size */
+            font-weight: bold;
         }
 
-        .navbar-logo {
-            max-width: 30px; /* Smaller logo on mobile */
+        @media (max-width: 768px) {
+            .paragraph p {
+                font-size: 1rem;
+                /* Smaller text on mobile */
+            }
+
+            .navbar-logo {
+                max-width: 30px;
+                /* Smaller logo on mobile */
+            }
         }
-    }
     </style>
 </head>
 
 <body>
 
-     <!-- Header Start -->
-     <header class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- Header Start -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
             <!-- New content section -->
             <div class="d-flex align-items-center">
@@ -78,15 +83,7 @@
                     {{-- <li class="nav-item ">
                         <a class="nav-link text-white" href="">Home</a>
                     </li> --}}
-                    {{-- <li class="nav-item">
-                        <a class="nav-link text-white" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contact</a>
-                    </li> --}}
+
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/logout">Logout</a>
                     </li>

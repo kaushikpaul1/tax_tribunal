@@ -168,28 +168,6 @@
                                         @foreach ($districts as $district)
                                             <option value="{{ $district->id }}">{{ $district->distname }}</option>
                                         @endforeach
-                                        {{-- <option value="AD">ALIPURDUAR</option>
-                                        <option value="BN">BANKURA</option>
-                                        <option value="KB">COOCHBEHAR</option>
-                                        <option value="DA">DARJEELING</option>
-                                        <option value="DD">DINAJPUR DAKSHIN</option>
-                                        <option value="UD">DINAJPUR UTTAR</option>
-                                        <option value="HG">HOOGHLY</option>
-                                        <option value="HR">HOWRAH</option>
-                                        <option value="JP">JALPAIGURI</option>
-                                        <option value="JH">JHARGRAM</option>
-                                        <option value="KA">KALIMPONG</option>
-                                        <option value="KO">KOLKATA</option>
-                                        <option value="MA">MALDAH</option>
-                                        <option value="KB">MEDINIPUR EAST</option>
-                                        <option value="KB">MEDINIPUR WEST</option>
-                                        <option value="KB">MURSHIDABAD</option>
-                                        <option value="KB">NADIA</option>
-                                        <option value="KB">PASCHIM BARDHAMAN</option>
-                                        <option value="BR">PURBA BARDHAMAN</option>
-                                        <option value="PU">PURULIA</option>
-                                        <option value="PN">24 PARAGANAS NORTH</option>
-                                        <option value="PS">24 PARAGANAS SOUTH</option> --}}
 
                                     </select>
                                 </div>
@@ -207,8 +185,8 @@
                                         aria-label="Select an Option" name='rdept' id="dropdown">
                                         <option value="0">--SELECT TYPE OF DEPARTMENT--</option>
                                         <option value="GST">GST</option>
-                                        {{-- <option value="d2">DEPARTMENT-2</option>
-                                        <option value="d3">DEPARTMENT-3</option> --}}
+                                        <option value="VAT">VAT</option>
+                                        <option value="SALES TAX">SALES TAX</option>
                                     </select>
                                 </div>
                                 <div class="form-group d-flex align-items-center ">
@@ -232,7 +210,7 @@
                                         <option value="0">--SELECT ADVOCATE--</option>
                                         <option value="RAM JETHMALANI">RAM JETHMALANI</option>
                                         <option value="FALI S NARIMAN">FALI S NARIMAN</option>
-                                        <option value="ASHOK DESAI
+                                        <option value="ASHOK DESAI
                                         ">ASHOK DESAI
                                         </option>
                                     </select>
@@ -262,4 +240,5 @@
             </div>
         </div>
     </div>
+    
 @endsection

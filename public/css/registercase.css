@@ -16,7 +16,7 @@
     margin-left: 2.3rem;
 }
 .ptn-middle-name{
-    margin-left: 1rem;
+    margin-left: 1.3rem;
 }
 .ptn-last-name{
     margin-left: 2.5rem;
@@ -25,20 +25,30 @@
     margin-left: 4.7rem;
 }
 .ptn-phone{
-    margin-left: 4rem;
+    margin-left: 4.1rem;
 }
 .input-margin{
     margin-left: 2rem;
 }
 .rsn-dgn{
-    margin-left: 6.3rem;
+    margin-left: 6rem;
 }
 .state-margin{
-    margin-left: 5.6rem;
+    margin-left: 5.2rem;
 }
 .dist-margin{
-    margin-left: 4.6rem;
+    margin-left: 4.3rem;
 }
-.form-control {
+/* .form-control {
     border: 1px solid rgb(204, 197, 197) !important; /* Add your desired border style */
-}
+/* } */ 
+    .form-control::placeholder {
+        color: #6c757d; /* Bootstrap default color */
+        opacity: 1; /* Ensures the placeholder is visible */
+    }
+
+    .form-control {
+        padding: 0.375rem 0.75rem; /* Padding for better appearance */
+        border: 1px solid #ced4da; /* Border to ensure visibility */
+        /* Other necessary styles */
+    }
